@@ -6,11 +6,11 @@ const path = require('path');
 const app = express();
 
 //とりあえずスタティックの場所指定
-app.use(express.static(__dirname + '/react-app/src/'));
+app.use(express.static(__dirname + '/react-app/build/'));
 
 //それ以外の時もindex.htmlへ
 app.all('*', (req, res, next) => {
-    res.sendFile(path.resolve(__dirname, 'react-app/src/index.html'));
+    res.sendFile(path.resolve(__dirname, 'react-app/build/index.html'));
 })
 
 exports.app = functions.https.onRequest(app);
