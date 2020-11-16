@@ -1,16 +1,9 @@
 const functions = require('firebase-functions');
-const express = require('express');
-const path = require('path');
 
-
-const app = express();
-
-//とりあえずスタティックの場所指定
-app.use(express.static(__dirname + '/react-app/build/'));
-
-//それ以外の時もindex.htmlへ
-app.all('*', (req, res, next) => {
-    res.sendFile(path.resolve(__dirname, 'react-app/build/index.html'));
-})
-
-exports.app = functions.https.onRequest(app);
+// // Create and Deploy Your First Cloud Functions
+// // https://firebase.google.com/docs/functions/write-firebase-functions
+//
+// exports.helloWorld = functions.https.onRequest((request, response) => {
+//   functions.logger.info("Hello logs!", {structuredData: true});
+//   response.send("Hello from Firebase!");
+// });
