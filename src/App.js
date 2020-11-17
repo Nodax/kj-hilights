@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import firebase from "./serviceAccount"
+import { BrowserRouter, Route } from 'react-router-dom';
 import "firebase/firestore"
 
 //各ページのコンポーネント群
