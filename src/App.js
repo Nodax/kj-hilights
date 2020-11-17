@@ -11,24 +11,6 @@ import monthly from "./monthly/monthly.js"
 import threeMonthly from "./threeMonthly/threeMonthly.js"
 import sixMonthly from "./sixMonthly/sixMonthly.js"
 
-//コレクション取得
-const getCollection = () => {
-  const db = firebase.firestore();
-  //moviesコレクションを取得
-  const movies = db.collection("movies");
-  movies.get().then(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
-      console.log(doc.id, " => ", doc.data());
-    });
-    console.log(querySnapshot.size);
-  })
-    .catch(function (error) {
-      console.log("Error getting documents: ", error);
-    });
-}
-
-getCollection();
-
 const App = () => {
   return (
     <div>

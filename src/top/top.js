@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import "firebase/firestore"
+
+import newestLive from "./getNewestLive.js"
 
 export default class Top extends React.Component {
     render() {
@@ -7,7 +10,6 @@ export default class Top extends React.Component {
             <div>
                 <h1>kj-hilights</h1>
                 <p>これまでの生放送の瞬間最大コメント数を取得し、最もコメントが流れた2分間をまとめるページです</p>
-
                 <p>最新動画</p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/cQLmPhdol4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
