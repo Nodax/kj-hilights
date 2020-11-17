@@ -4,21 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-/* コンポーネント */
-class MyComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello! World.</h1>
-        <p>ここはコンポーネントとしてjsx側に書いた部分</p>
-      </div>
-    )
-  }
-}
-
 ReactDOM.render(
   <React.StrictMode>
-    <MyComponent />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
