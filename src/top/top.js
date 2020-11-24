@@ -8,15 +8,17 @@ let start;
 let end;
 let url;
 
-newestRecord.then((value) => {
-    console.log("result");
-    console.log(newestRecord);
-    console.log(value);
-    title = value[0].title;
-    start = value[0].start;
-    end = value[0].end;
-    url = value[0].url;
-});
+if (value[0].title === undefined) {
+    newestRecord.then((value) => {
+        console.log("result");
+        console.log(newestRecord);
+        console.log(value);
+        title = value[0].title;
+        start = value[0].start;
+        end = value[0].end;
+        url = value[0].url;
+    });
+}
 
 export default class Top extends React.Component {
 
